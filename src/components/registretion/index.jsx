@@ -18,6 +18,7 @@ function Registretion() {
       [name]: value,
     }));
   }
+
   // Обработчик отправки формы
   async function registerUser(event) {
     event.preventDefault();
@@ -29,8 +30,6 @@ function Registretion() {
     } catch (error) {
       console.log("Error registered user", error);
     }
-    const userPost = await axios.post(URL);
-    return userPost.data;
   }
 
   return (
